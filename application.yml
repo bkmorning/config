@@ -20,7 +20,7 @@ eureka:
 models: 
   profile:
     type: dev
-    name: 开发环境
+    name: 开发环境111
     
 
 ---
@@ -37,4 +37,4 @@ eureka:
 models: 
   profile:
     type: test
-    name: 测试环境
+    name: 测试环境222
