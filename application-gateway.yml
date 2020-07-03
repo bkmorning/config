@@ -3,8 +3,12 @@ eureka:
     prefer-ip-address: true
     hostname: GATEWAY-SERVER
     instance-id: GATEWAY-SERVER-ID
-
-spring: 
+ 
+spring:
+  profiles:
+    active: dev
+  application:
+    name: GATEWAY
   cloud:
     gateway:
       discovery:
@@ -24,7 +28,7 @@ spring:
         filters:
         - StripPrefix=1
       - id: config-client-route
-        uri: lb://config-client
+        uri: lb://CONFIGCLIENT-GIT
         predicates:
         - Path=/config-client/**
         filters:
