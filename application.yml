@@ -17,6 +17,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka/
+models: 
+  profile:
+    type: dev
+    name: 开发环境
+    
 
 ---
 spring:
@@ -28,3 +33,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://formssi-eureka:10000/eureka/
+      
+models: 
+  profile:
+    type: test
+    name: 测试环境
