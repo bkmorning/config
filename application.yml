@@ -1,5 +1,30 @@
-server:
-  port: 10005
 spring:
   application:
-    name: CONFIGSERVER-SERVER-GIT
+    name: CONFIGCLIENT-GIT
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: CONFIGCLIENT
+    instance-id: CONFIGCLIENT-ID
+
+---
+spring:
+  profiles: dev
+server:
+  port: 10006
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10000/eureka/
+
+---
+spring:
+  profiles: test
+server:
+  port: 10006
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://formssi-eureka:10000/eureka/
