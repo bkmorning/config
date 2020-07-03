@@ -1,0 +1,35 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: GATEWAY-SERVER
+    instance-id: GATEWAY-SERVER-ID
+
+spring: 
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: product-server-route
+        uri: lb://PRODUCT
+        predicates:
+        - Path=/product-server/**
+        filters:
+        - StripPrefix=1
+      - id: customer-server-route
+        uri: lb://CUSTOMER
+        predicates:
+        - Path=/customer-server/**
+        filters:
+        - StripPrefix=1
+      - id: config-client-route
+        uri: lb://config-client
+        predicates:
+        - Path=/config-client/**
+        filters:
+        - StripPrefix=1
+        
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
