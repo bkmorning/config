@@ -13,7 +13,13 @@ spring:
 
   application:
     name: CUSTOMER
- 
+    
+ eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: CUSTOMER-SERVER
+    instance-id: CUSTOMER-SERVER-ID
+    
 ---
 spring:
   profiles: dev    
