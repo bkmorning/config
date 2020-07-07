@@ -14,7 +14,7 @@ spring:
   application:
     name: CUSTOMER
     
- eureka:
+eureka:
   instance:
     prefer-ip-address: true
     hostname: CUSTOMER-SERVER
