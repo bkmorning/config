@@ -33,7 +33,3 @@ spring:
         - Path=/config-client/**
         filters:
         - StripPrefix=1
-        
-logging:
-  level:
-    org.springframework.cloud.gateway: debug
