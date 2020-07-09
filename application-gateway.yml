@@ -16,7 +16,7 @@ spring:
           enabled: true
       routes:
       - id: product-server-route
-        uri: lb://
+        uri: lb://PRODUCT
         predicates:
         - Path=/product-server/**
         filters:
