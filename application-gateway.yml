@@ -16,7 +16,7 @@ spring:
           enabled: true
       routes:
       - id: product-server-route
-        uri: lb://CONFIGCLIENT-GIT
+        uri: lb://
         predicates:
         - Path=/product-server/**
         filters:
