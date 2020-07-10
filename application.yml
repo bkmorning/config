@@ -20,7 +20,7 @@ eureka:
 models: 
   profile:
     type: dev
-    name: aa开发环境aa
+    name: aa开发环境bbb
     
 
 ---
